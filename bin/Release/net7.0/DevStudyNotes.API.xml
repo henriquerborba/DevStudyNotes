@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevStudyNotes.API</name>
+    </assembly>
+    <members>
+        <member name="M:DevStudyNotes.API.Controllers.StudyNotesController.GetAll">
+            <summary>
+            Busca todas as notas de estudo
+            </summary>
+            <returns>Lista de todas as notas de estudo</returns>
+        </member>
+        <member name="M:DevStudyNotes.API.Controllers.StudyNotesController.GetById(System.Int32)">
+            <summary>
+            Busca uma nota de estudo por id
+            </summary>
+            <param name="id">Id da nota de estudo</param>
+            <returns>
+            Retorna a nota de estudo caso encontrada, caso não retorna notFund
+            </returns>
+        </member>
+        <member name="M:DevStudyNotes.API.Controllers.StudyNotesController.Post(DevStudyNotes.API.models.AddStudyNoteInputModel)">
+            <summary>
+            Cadastrar uma nota de estudo
+            </summary>
+            <remarks>
+            { "title": "Estudos AZ-400", "description": "Sobre o Azure Blob Storage", "isPublic": true }
+            </remarks>
+            <param name="model">Dados de uma nota de estudo</param>
+            <returns>Objeto recém-criado</returns>
+            <response code="201">Retorna o objeto recém-criado</response>
+        </member>
+        <member name="M:DevStudyNotes.API.Controllers.StudyNotesController.PostReaction(System.Int32,DevStudyNotes.API.models.AddReactionStudyNoteModel)">
+            <summary>
+            Adicionar uma reação a uma nota de estudo
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+        </member>
+        <member name="T:DevStudyNotes.API.Persistence.Migrations.PrimeiraMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:DevStudyNotes.API.Persistence.Migrations.PrimeiraMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DevStudyNotes.API.Persistence.Migrations.PrimeiraMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:DevStudyNotes.API.Persistence.Migrations.PrimeiraMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
